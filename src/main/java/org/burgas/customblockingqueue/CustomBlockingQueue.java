@@ -37,6 +37,7 @@ public final class CustomBlockingQueue {
         }
 
         Runnable task = this.first.getTask();
+        this.first = this.first.getNextNode();
         this.size--;
 
         return task;
